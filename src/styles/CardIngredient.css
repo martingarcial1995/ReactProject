@@ -1,0 +1,29 @@
+.card {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.fruit,
+.quant {
+  font-size: 19px;
+}
+.fruit {
+  font-weight: bold;
+}
+.quant {
+}
+.btn_edit {
+}
+.btn_delete {
+}
+.btn_edit,
+.btn_delete {
+  width: 70px;
+  height: 20px;
+  border: 0.5px solid #000;
+  background-color: #fff;
+}
