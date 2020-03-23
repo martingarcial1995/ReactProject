@@ -27,3 +27,8 @@
   border: 0.5px solid #000;
   background-color: #fff;
 }
+.listCard {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 95, 95);
+}

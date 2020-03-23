@@ -45,9 +45,9 @@ const Crud = () => {
     setCards(cards.filter(card => card.id !== id));
   };
 
-  const updateCard = (id, updateCard) => {
+  const updateCard = (id, updatedCard) => {
     setEditing(false);
-    setCards(cards.map(card => (card.id === id ? updateCard : card)));
+    setCards(cards.map(card => (card.id === id ? updatedCard : card)));
   };
 
   const editCard = card => {
@@ -70,25 +70,19 @@ const Crud = () => {
             <FormEdit
               editing={editing}
               setEditing={setEditing}
-              currentUser={currentCard}
-              updateUser={updateCard}
+              currentCard={currentCard}
+              updateCard={updateCard}
             />
           ) : (
             <FormAdd addCard={addCard} />
           )}
         </div>
         <div className="section list">
-          {cardData.map(card => (
-            <CardIngredient
-              editCard={editCard}
-              deleteCard={deleteCard}
-              key={card.id}
-              nameFruit={card.nameFruit}
-              quantFruit={card.quantFruit}
-              bgColor={card.bgColor}
-              fontColor={card.fontColor}
-            />
-          ))}
+          <CardIngredient
+            editCard={editCard}
+            deleteCard={deleteCard}
+            cards={cards}
+          />
         </div>
       </div>
     </div>

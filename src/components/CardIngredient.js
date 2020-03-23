@@ -1,32 +1,36 @@
 import React from "react";
 import "../styles/CardIngredient.css";
 
-const CardIngredient = ({
-  nameFruit,
-  quantFruit,
-  bgColor,
-  fontColor,
-  editCard,
-  deleteCard
-}) => (
-  <div
-    className="card"
-    style={{ backgroundColor: `${bgColor}`, color: `${fontColor}` }}
-  >
-    <p className="fruit">{nameFruit}</p>
-    <p className="quant">{quantFruit} gr</p>
+const CardIngredient = props => (
+  <div className="listCard">
+    {props.cards.map(card => (
+      <div
+        className="card"
+        key={card.id}
+        style={{
+          backgroundColor: `${card.bgColor}`,
+          color: `${card.fontColor}`
+        }}
+      >
+        <p className="fruit">{card.nameFruit}</p>
+        <p className="quant">{card.quantFruit} gr</p>
 
-    <button
-      onClick={() => {
-        editCard(this);
-      }}
-      className="btn_edit"
-    >
-      Editar
-    </button>
-    <button onClick={() => deleteCard(this.id)} className="btn_delete">
-      Eliminar
-    </button>
+        <button
+          onClick={() => {
+            props.editCard(card);
+          }}
+          className="btn_edit"
+        >
+          Editar
+        </button>
+        <button
+          onClick={() => props.deleteCard(card.id)}
+          className="btn_delete"
+        >
+          Eliminar
+        </button>
+      </div>
+    ))}
   </div>
 );
 

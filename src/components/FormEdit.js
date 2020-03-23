@@ -10,16 +10,16 @@ const FormEdit = props => {
 
   const handleInputChange = event => {
     const { name, value } = event.target;
-
     setCard({ ...card, [name]: value });
   };
+
   return (
     <React.Fragment>
       <h1>Editar</h1>
       <form
         onSubmit={event => {
           event.preventDefault();
-          props.updateUser(card.id, card);
+          props.updateCard(card.id, card);
         }}
       >
         <label>Agregar Ingrediente</label>
@@ -58,8 +58,9 @@ const FormEdit = props => {
           value={card.fontColor}
           onChange={handleInputChange}
         />
+        <button className="btn__send">Guardar cambio</button>
         <button className="btn__send" onClick={() => props.setEditing(false)}>
-          Enviar
+          Cancelar
         </button>
       </form>
     </React.Fragment>
