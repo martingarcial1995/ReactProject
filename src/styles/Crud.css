@@ -10,7 +10,6 @@
   height: auto;
 }
 .form {
-  border-right: 1px solid #fff;
 }
 .list {
 }
@@ -41,6 +40,28 @@ form {
   font-weight: bold;
   background-color: #6975d7;
 }
-.add:active{
+.add:active {
   background-color: #4e5bc0;
+}
+@media (max-width: 750px) {
+  .crud__container {
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .container__formEdit {
+    text-align: center;
+    margin: 0 auto;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+  h1 {
+    text-align: center;
+  }
 }
