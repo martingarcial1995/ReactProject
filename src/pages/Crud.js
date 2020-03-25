@@ -11,14 +11,14 @@ const Crud = () => {
       id: 1,
       nameFruit: "Platano",
       quantFruit: "200",
-      bgColor: "#333",
+      bgColor: "#af7228",
       fontColor: "#fff"
     },
     {
       id: 2,
       nameFruit: "Fresa",
       quantFruit: "100",
-      bgColor: "#FF0000",
+      bgColor: "#ea4869",
       fontColor: "#fff"
     }
   ];
@@ -40,11 +40,12 @@ const Crud = () => {
     setCards([...cards, card]);
   };
 
-  const deleteCard = id => {
-    setEditing(false);
-    setCards(cards.filter(card => card.id !== id));
-  };
-
+  // const deleteCard = id => {
+  //   setEditing(false);
+  //   setCards(cards.filter(card => card.id !== id));
+  // };
+  const deleteCard = id => setCards(cards.filter(card => card.id !== id));
+  
   const updateCard = (id, updatedCard) => {
     setEditing(false);
     setCards(cards.map(card => (card.id === id ? updatedCard : card)));
@@ -66,16 +67,15 @@ const Crud = () => {
       <Navbar />
       <div className="crud__container">
         <div className="section form">
-          {editing ? (
+          {editing === true && (
             <FormEdit
               editing={editing}
               setEditing={setEditing}
               currentCard={currentCard}
               updateCard={updateCard}
             />
-          ) : (
-            <FormAdd addCard={addCard} />
           )}
+          <FormAdd addCard={addCard} />
         </div>
         <div className="section list">
           <CardIngredient

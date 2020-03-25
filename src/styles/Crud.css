@@ -10,25 +10,37 @@
   height: auto;
 }
 .form {
-  background-color: rgb(33, 135, 153);
+  border-right: 1px solid #fff;
 }
 .list {
-  background-color: rgb(33, 153, 83);
 }
 form {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .campo {
-  width: 50%;
-  height: 25px;
-  border-radius: 5px;
-  outline: none;
+  width: 300px;
+  height: 35px;
+  padding: 5px 10px;
+  background-color: #fafafa;
+  border: 1px #cacaca solid;
+  border-radius: 3px;
+  box-shadow: inset 1px #333;
 }
 .campo {
   margin: 5px 0;
 }
-.btn__send {
-  width: 120px;
-  height: 30px;
+.btn.add {
+  width: 320px;
+  height: 40px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #6975d7;
+}
+.add:active{
+  background-color: #4e5bc0;
 }

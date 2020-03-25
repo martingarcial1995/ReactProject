@@ -28,7 +28,7 @@ const FormAdd = props => {
             !card.bgColor ||
             !card.fontColor
           )
-          return;
+            return;
           props.addCard(card);
           setCard(initialFormState);
         }}
@@ -69,7 +69,7 @@ const FormAdd = props => {
           value={card.fontColor}
           onChange={handleInputChange}
         />
-        <button className="btn__send">Agregar Ingrediente</button>
+        <button className="btn add">Agregar Ingrediente</button>
       </form>
     </React.Fragment>
   );

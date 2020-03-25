@@ -1,15 +1,24 @@
+.listCard {
+  width: 100%;
+  height: auto;
+}
 .card {
-  width: 80%;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  border-radius: 5px;
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+h1 {
+  padding-left: 10px;
 }
 .fruit,
 .quant {
   font-size: 19px;
+  padding-left: 15px;
 }
 .fruit {
   font-weight: bold;
@@ -17,18 +26,30 @@
 .quant {
 }
 .btn_edit {
+  background-color: #5cb85c;
+}
+.btn_edit:active {
+  background-color: #519b51;
+  box-shadow: 1px 1px 1px #3a3a3a;
 }
 .btn_delete {
+  background-color: #e62e2b;
+}
+.btn_delete:active {
+  background-color: #c02624;
+  box-shadow: 1px 1px 1px #3a3a3a;
 }
 .btn_edit,
 .btn_delete {
-  width: 70px;
-  height: 20px;
-  border: 0.5px solid #000;
-  background-color: #fff;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px #3a3a3a;
 }
 .listCard {
   width: 100%;
   height: auto;
-  background-color: rgb(255, 95, 95);
 }
